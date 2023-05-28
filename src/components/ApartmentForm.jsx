@@ -54,7 +54,7 @@ const ApartmentForm = () => {
     dispatch(fetchStart());
     try {
       const filterData = apartments.filter((apart) => apart.id !== home.id);
-      const location = apartments.find((apart) => apart.id == home.id);
+      const location = apartments.find((apart) => apart.id === home.id);
 
       filterData.splice(apartments.indexOf(location), 0, home);
       console.log("filter", filterData);

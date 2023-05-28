@@ -14,13 +14,17 @@ const VisitList = () => {
   return (
     <div className="container">
       <div className="d-flex justify-content-between align-items-center">
-        <div className="fs-2"> Visits</div>
+        <div className="fs-2 m-3"> Visits</div>
         <div
-          className="btn btn-outline-success py-1"
+          className="button btn-outline-success py-1"
           style={{ backgroundColor: "#1abc94", border: "none" }}
           onClick={() => navigate("/visits/form")}
         >
-          Add Visit
+
+          <button type="button" className="button">
+            <span className="button__text">Add Visit</span>
+            <span className="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" className="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+          </button>
         </div>
       </div>
 
@@ -50,7 +54,7 @@ const VisitList = () => {
                 <td>{vis?.note}</td>
                 <td>{vis?.visitedPerson}</td>
                 <td>
-                  {currentUser?.fullname == vis?.visitedPerson ? (
+                  {currentUser?.fullname === vis?.visitedPerson ? (
                     <>
                       <i
                         className="fa-solid fa-marker pe-3"

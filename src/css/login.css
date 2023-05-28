@@ -171,32 +171,116 @@ body {
 }
 
 .btn {
-    width: 165px;
-    height: 62px;
-    cursor: pointer;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
     color: #fff;
-    font-size: 17px;
-    border-radius: 1rem;
-    border: none;
+    padding: 1em 1.8em;
+    background: #645bff;
+    display: flex;
+    transition: 0.2s;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+}
+
+.btn .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn .arrow {
+    margin-top: 1px;
+    width: 10px;
+    background: #645bff;
+    height: 2px;
     position: relative;
-    background: #0b1741;
-    transition: 0.1s;
+    transition: 0.2s;
 }
 
-.btn::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2%);
-    filter: blur(15px);
-    z-index: -1;
+.btn .arrow::before {
+    content: "";
+    box-sizing: border-box;
     position: absolute;
-    left: 0;
-    top: 0;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
 }
 
-.btn:active {
-    transform: scale(0.9) rotate(3deg);
-    background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2%);
-    transition: 0.5s;
+.btn:hover {
+    background-color: #111;
+}
+
+.btn:hover .arrow {
+    background: #fff;
+}
+
+.btn:hover .arrow:before {
+    right: 0;
+}
+
+.button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+}
+
+.button,
+.button__icon,
+.button__text {
+    transition: all 0.3s;
+}
+
+.button .button__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 600;
+}
+
+.button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button .svg {
+    width: 30px;
+    stroke: #fff;
+}
+
+.button:hover {
+    background: #34974d;
+}
+
+.button:hover .button__text {
+    color: transparent;
+}
+
+.button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+}
+
+.button:active .button__icon {
+    background-color: #2e8644;
+}
+
+.button:active {
+    border: 1px solid #2e8644;
 }

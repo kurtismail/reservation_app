@@ -69,7 +69,7 @@ const VisitForm = () => {
     dispatch(fetchStart());
     try {
       const filterData = visit.filter((vis) => vis.id !== visitHome.id);
-      const location = visit.find((vis) => vis.id == visitHome.id);
+      const location = visit.find((vis) => vis.id === visitHome.id);
 
       filterData.splice(visit.indexOf(location), 0, visitHome);
 
@@ -107,11 +107,11 @@ const VisitForm = () => {
             )}
 
             {apartments?.map((ap, i) =>
-              ap?.title == visitHome?.apartment ? (
+              ap?.title === visitHome?.apartment ? (
                 <option key={i} defaultValue={ap.title} selected>
                   {ap.title}
                 </option>
-              ) : ap?.title == visitHome?.title ? (
+              ) : ap?.title === visitHome?.title ? (
                 <option key={i} defaultValue={ap.title} selected>
                   {ap.title}
                 </option>
@@ -165,33 +165,27 @@ const VisitForm = () => {
           />
         </div>
         {state?.title ? (
-          <div className="text-center">
-            <button
-              className="btn btn-outline-success"
-              type="submit"
-              style={{ backgroundColor: "#1abc94", border: "none" }}
-            >
-              Add Visit
+          <div className="text-center mr-4">
+
+            <button type="submit" className="button">
+              <span className="button__text">Add Visit</span>
+              <span className="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" className="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
             </button>
           </div>
         ) : state ? (
-          <div className="text-center">
-            <button
-              className="btn btn-outline-success"
-              type="submit"
-              style={{ backgroundColor: "#1abc94", border: "none" }}
-            >
-              Update Visit
+          <div classNameName="text-center mr-4">
+
+            <button type="submit" className="button ">
+              <span className="button__text">Update Visit</span>
+              <span className="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" className="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
             </button>
           </div>
         ) : (
-          <div className="text-center">
-            <button
-              className="btn btn-outline-success"
-              type="submit"
-              style={{ backgroundColor: "#1abc94", border: "none" }}
-            >
-              Add Visit
+          <div classNameName="text-center mr-4">
+
+            <button type="submit" className="button">
+              <span className="button__text">Add Visit</span>
+              <span className="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" className="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
             </button>
           </div>
         )}

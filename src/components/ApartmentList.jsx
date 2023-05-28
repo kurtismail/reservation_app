@@ -48,7 +48,7 @@ const ApartmentList = () => {
                 <td>{home?.price}</td>
                 <td>{home?.owner}</td>
                 <td>
-                  {currentUser?.fullname == home?.owner ? (
+                  {currentUser?.fullname === home?.owner ? (
                     <>
                       <i
                         className="fa-solid fa-marker"

@@ -84,10 +84,18 @@ const LoginForm = () => {
         {!currentUser?.id ? (
           <button type="submit" className="btn">
             Login
+            <div className="arrow-wrapper">
+              <div className="arrow"></div>
+
+            </div>
           </button>
         ) : (
           <button type="submit" className="btn">
             Logout
+            <div className="arrow-wrapper">
+              <div className="arrow"></div>
+
+            </div>
           </button>
         )}
       </div>

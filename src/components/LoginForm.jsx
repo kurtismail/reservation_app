@@ -82,20 +82,12 @@ const LoginForm = () => {
 
       <div className="text-center">
         {!currentUser?.id ? (
-          <button type="submit" className="btn">
+          <button type="submit" className="shadow__btn" >
             Login
-            <div className="arrow-wrapper">
-              <div className="arrow"></div>
-
-            </div>
           </button>
         ) : (
-          <button type="submit" className="btn">
+          <button type="submit" className="shadow__btn" >
             Logout
-            <div className="arrow-wrapper">
-              <div className="arrow"></div>
-
-            </div>
           </button>
         )}
       </div>

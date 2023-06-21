@@ -2,7 +2,7 @@
 
 ### Links
 
-- Live: [Live Website](https://booking-app-s.vercel.app/)
+- Live: [Live Website](vercel.app/)
 
 ## My Process
 

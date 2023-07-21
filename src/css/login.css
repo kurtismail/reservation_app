@@ -19,7 +19,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 1em;
+    gap: 1.2em;
 }
 
 .input-container {

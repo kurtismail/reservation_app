@@ -61,9 +61,9 @@
 }
 
 .side-line {
-  transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.30s;
 }
 
 .side-line:hover {
-  background-color: rgb(191, 191, 191);
+  background-color: rgb(192, 191, 191);
 }
